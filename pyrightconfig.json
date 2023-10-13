@@ -1,0 +1,8 @@
+{
+  "exclude": ["**/node_modules", "**/__pycache__", ".venv"],
+  "ignore": [],
+  "venv": ".venv",
+  "venvPath": ".",
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false
+}
