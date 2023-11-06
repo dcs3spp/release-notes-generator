@@ -16,16 +16,16 @@ def generate_markdown(releaseNote: ReleaseNote) -> StringIO:
         if product.changelog.added:
             writer.write("#### Added\n\n")
             for item in product.changelog.added:
-                writer.write(f"- {item.title()}\n\n")
+                writer.write(f"- {item}\n\n")
 
         if product.changelog.fixed:
             writer.write("#### Fixed\n\n")
             for item in product.changelog.fixed:
-                writer.write(f"- {item.title()}\n\n")
+                writer.write(f"- {item}\n\n")
 
         if product.changelog.updated:
             writer.write("#### Updated\n\n")
             for item in product.changelog.updated:
-                writer.write(f"- {item.title()}\n\n")
+                writer.write(f"- {item}\n\n")
 
     return writer

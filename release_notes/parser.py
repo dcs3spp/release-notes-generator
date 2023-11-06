@@ -93,7 +93,6 @@ def _validate(data: dict[str | Any, str | Any], row: int) -> _ParsedRow:
     changeTypeColumn = data.get(str(_Column.CHANGE_TYPE))
 
     if not productColumn:
-        breakpoint()
         message = f"Empty product value in column {_Column.PRODUCT.name} @ row {row}"
         _parseErrors.append(message)
 
@@ -103,15 +102,12 @@ def _validate(data: dict[str | Any, str | Any], row: int) -> _ParsedRow:
 
     if not releaseNotesColumn:
         message = f"Empty release notes value in column {_Column.RELEASE_NOTE.name} @ row : {row}"
-        # breakpoint()
         _parseErrors.append(message)
 
     products = []
     change = None
 
     try:
-        if changeTypeColumn == "Change":
-            breakpoint()
         change = _validate_change(changeTypeColumn, row) if changeTypeColumn else None
         products = _validate_products(productColumn, row) if productColumn else []
     except ValueError as ve:
