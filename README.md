@@ -6,17 +6,19 @@ The CSV file is expected to be produced from a confluence table copied into a sp
 The CSV parser parses the following column headings:
 
 - Component/S
-- Release Notes*
+- Release Notes\*
 - Change
 
 Ensure the following:
-- Component/S column is completed and contains no blank values. The script will report rows that contain 
-blank values and offer to continue generating the markdown. The parser recognises the following values in the Component/S column (Tyk Portal (old), Tyk Portal, Tyk Dashboard, Documentation, Tyk Gateway, Internal, None, Tyk Plugin, Tyk Pump)
+
+- The first row contains the column headings row, there are no preceding blank
+  rows.
+- Component/S column is completed and contains no blank values. The script will report rows that contain
+  blank values and offer to continue generating the markdown. The parser recognises the following values in the Component/S column (Tyk Portal (old), Tyk Portal, Tyk Dashboard, Documentation, Tyk Gateway, Internal, None, Tyk Plugin, Tyk Pump)
 - Add a Change column that contains one of the enumerated values (Add, Deleted, Deprecated, Fix, Internal, None or Update).
-The script will report rows that contain blank values and offer to continue generating the markdown.
+  The script will report rows that contain blank values and offer to continue generating the markdown.
 
 The Component/S column can contain multiple values, separated by a comma. For example: Tyke Dashboard, Tyk Gateway.
-
 
 ## Prerequisites
 
@@ -26,7 +28,7 @@ The Component/S column can contain multiple values, separated by a comma. For ex
 
 ## Python Dependencies
 
-The Python dependencies are listed in the *pyproject.toml* file in the root of the repository
+The Python dependencies are listed in the _pyproject.toml_ file in the root of the repository
 
 ## Running The Script
 
