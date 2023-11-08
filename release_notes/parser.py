@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 
 
 class _Column(StrEnum):
-    PRODUCT = "Component/S"
-    RELEASE_NOTE = "Release Notes*"
+    PRODUCT = "Components"
+    RELEASE_NOTE = "Custom field (Release Notes*)"
     CHANGE_TYPE = "Change"
 
 
