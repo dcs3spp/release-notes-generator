@@ -148,9 +148,9 @@ def _createChangeLogEntry(
     match change:
         case "Add":
             productChangeLog[product].changelog.added.append(desciption)
-        case "deleted":
+        case "Deleted":
             productChangeLog[product].changelog.deleted.append(desciption)
-        case "deprecated":
+        case "Deprecated":
             productChangeLog[product].changelog.deprecated.append(desciption)
         case "Fix":
             productChangeLog[product].changelog.fixed.append(desciption)
