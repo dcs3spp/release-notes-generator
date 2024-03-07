@@ -19,10 +19,12 @@ class ProductEnum(str, Enum):
     docs = "Documentation"
     gateway = "Tyk Gateway"
     internal = "Internal"
+    mdcb = "Tyk MDCB"
     none = "None"
     plugin = "Tyk Plugin"
     pump = "Tyk Pump"
-
+    storage = "Storage"
+    tib = "Tyk Identity Broker"
 
 class ChangeLog(BaseModel):
     added: list[str] = []
